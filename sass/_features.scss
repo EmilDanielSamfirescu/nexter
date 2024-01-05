@@ -1,0 +1,33 @@
+.features{
+    grid-column: center-start / center-end;
+
+    margin: 9.375rem 0;
+
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    //modalita responsive senza scrivere media query: grid-auto-fit con minmax() consente a una griglia di adattarsi dinamicamente allo spazio disponibile, garantendo al contempo una dimensione minima desiderata per le colonne.
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    grid-gap: 3.75rem;
+    align-items: start;
+}
+
+.feature{
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: .9375rem;
+    grid-column-gap: 1.5625rem;
+
+
+    &__icon{
+        fill: $color-primary;
+        width: 2.8125rem;
+        height: 2.8125rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-0.625rem);
+    }
+
+    &__text{
+        font-size: 1.0625rem;
+    }
+}
